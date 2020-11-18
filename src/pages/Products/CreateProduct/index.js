@@ -61,8 +61,7 @@ export default function CreateProduct() {
   return (
     <SContainer>
       {loading && <CircularProgress />}
-
-      {error.status && <CustomizedSnackbars openProp={error} />}
+      <h1>Essa página ta foda</h1>
       <form onSubmit={onSubmit}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
