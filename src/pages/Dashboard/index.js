@@ -8,6 +8,5 @@ const Dashboard = () => {
     </div>
   );
 };
-//oi gato
 
 export default Dashboard;
