@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typography } from '@material-ui/core';
+import React from "react";
+import { Typography } from "@material-ui/core";
 
 const Dashboard = () => {
   return (
@@ -8,5 +8,6 @@ const Dashboard = () => {
     </div>
   );
 };
+//oi gato
 
 export default Dashboard;
