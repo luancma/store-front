@@ -1,9 +1,9 @@
-import React from "react";
-import MaterialTable from "material-table";
-import { Button } from "@material-ui/core";
-import getAllStock from "../../services/stock/getAllStock";
-import useFetch from "../../hooks/useFetch";
-import SContainer from "../../components/styled/Container";
+import React from 'react';
+import MaterialTable from 'material-table';
+import { Button } from '@material-ui/core';
+import getAllStock from '../../services/stock/getAllStock';
+import useFetch from '../../hooks/useFetch';
+import SContainer from '../../components/styled/Container';
 
 function Stock() {
   const getAllRequest = async () => getAllStock();
@@ -25,10 +25,10 @@ function Stock() {
       </Button>
       <MaterialTable
         columns={[
-          { title: "Name", field: "product.name" },
-          { title: "Preço de venda", field: "product.salePrice" },
-          { title: "Estoque atual", field: "current", type: "numeric" },
-          { title: "Total", field: "total", type: "numeric" },
+          { title: 'Name', field: 'product.name' },
+          { title: 'Preço de venda', field: 'product.salePrice' },
+          { title: 'Estoque atual', field: 'current', type: 'numeric' },
+          { title: 'Total', field: 'total', type: 'numeric' },
         ]}
         data={data}
         title="Estoque"
