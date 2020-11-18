@@ -3,10 +3,11 @@ import { CircularProgress, Typography } from '@material-ui/core';
 import MaterialTable from 'material-table';
 import SContainer from '../../components/styled/Container';
 import useFetch from '../../hooks/useFetch';
-import getAllProducts from '../../services/products/getAllProducts';
+import createNewProduct from '../../services/local/product/createNewProduct';
+import getAllProducts from '../../services/local/product/getAllProducts';
 
 const Products = () => {
-  const getAllProductsRequest = async () => await getAllProducts();
+  const getAllProductsRequest = async () => getAllProducts();
 
   const { data, loading, error } = useFetch({ func: getAllProductsRequest });
 
@@ -16,28 +17,20 @@ const Products = () => {
 
   return (
     <SContainer>
-      <Typography>Produtos</Typography>
       <MaterialTable
         columns={[
-          {
-            title: 'Código do produto',
-            field: 'productCode',
-            type: 'string',
-          },
-          { title: 'Name', field: 'name', type: 'string' },
+          { title: 'Name', field: 'name' },
           {
             title: 'Preço de venda',
             field: 'salePrice',
-            type: 'numeric',
           },
           {
             title: 'Preço de compra',
             field: 'purchasePrice',
-            type: 'numeric',
           },
         ]}
-        data={data.products}
-        title="Estoque"
+        data={data}
+        title="Produtos"
       />
     </SContainer>
   );

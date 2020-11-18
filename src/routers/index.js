@@ -1,11 +1,11 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Stock from "../pages/Stock";
-import Sale from "../pages/Sale";
-import User from "../pages/User";
-import Dashboard from "../pages/Dashboard";
-import Products from "../pages/Products";
-import CreateProduct from "../pages/Products/CreateProduct";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Stock from '../pages/Stock';
+import Sale from '../pages/Sale';
+import User from '../pages/User';
+import Dashboard from '../pages/Dashboard';
+import Products from '../pages/Products';
+import CreateProduct from '../pages/Products/CreateProduct';
 
 const Routes = () => (
   <Switch>

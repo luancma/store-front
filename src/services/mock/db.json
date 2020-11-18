@@ -1,0 +1,55 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "name": "Fone de ouvido",
+            "salePrice": 65.9,
+            "purchasePrice": 59.9,
+            "provider": 1
+        },
+        {
+            "id": 1,
+            "name": "Laptop",
+            "salePrice": 2000,
+            "purchasePrice": 5000,
+            "provider": 1
+        },
+        {
+            "id": 2,
+            "name": "Monitor",
+            "salePrice": 1200,
+            "purchasePrice": 1600,
+            "provider": 2
+        },
+        {
+            "id": 3,
+            "name": "Geladeira",
+            "salePrice": 3500,
+            "purchasePrice": 3700,
+            "provider": 2
+        },
+        {
+            "id": 4,
+            "name": "Cadeira confortável",
+            "salePrice": 2300,
+            "purchasePrice": 2800,
+            "provider": null
+        }
+    ],
+    "provider": [
+        {
+            "id": 0,
+            "name": "Fulado de Tal",
+            "company": "Fulano SA",
+            "phone": "xxxxxxxx",
+            "email": "email@email.com"
+        },
+        {
+            "id": 1,
+            "name": "Ciclano de Tal",
+            "company": "Ciclano SA",
+            "phone": "xxxxxxxx",
+            "email": "email@email.com"
+        }
+    ]
+}

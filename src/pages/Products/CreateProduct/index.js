@@ -1,22 +1,21 @@
-import * as React from "react";
-import TextField from "@material-ui/core/TextField";
-import { CircularProgress, Grid } from "@material-ui/core";
-import SContainer from "../../../components/styled/Container";
-import SButton from "../../../components/styled/Button";
-import createNewProduct from "../../../services/products/createNewProduct";
-import CustomizedSnackbars from "./CustomizedSnackbars";
+import * as React from 'react';
+import TextField from '@material-ui/core/TextField';
+import { CircularProgress, Grid } from '@material-ui/core';
+import SContainer from '../../../components/styled/Container';
+import SButton from '../../../components/styled/Button';
+import createNewProduct from '../../../services/products/createNewProduct';
+import CustomizedSnackbars from './CustomizedSnackbars';
 
 export default function CreateProduct() {
-  const [totalPorcent, setTotalPorcent] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
   const [porcent, setPorcent] = React.useState(0);
   const [error, setError] = React.useState({
     status: false,
-    message: "",
+    message: '',
   });
 
   const [product, setProduct] = React.useState({
-    name: "",
+    name: '',
     salePrice: 0,
     purchasePrice: 0,
     productCode: 0,
@@ -29,12 +28,12 @@ export default function CreateProduct() {
     );
   }, [product.salePrice, porcent]);
 
-  const getAllProductsRequest = async () => await createNewProduct(product);
+  const getAllProductsRequest = async () => createNewProduct(product);
 
   const createProduct = async () => {
     setLoading(true);
     getAllProductsRequest(product)
-      .then((response) => {
+      .then(response => {
         if (response.data.error) {
           setError({
             status: true,
@@ -42,16 +41,16 @@ export default function CreateProduct() {
           });
         }
       })
-      .catch((error) => console.log({ error }));
+      .catch(error => console.log({ error }));
     setLoading(false);
   };
 
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     event.preventDefault();
     createProduct();
   };
 
-  const handleInput = (event) => {
+  const handleInput = event => {
     setProduct({
       ...product,
       [event.target.name]: event.target.value,
@@ -72,7 +71,7 @@ export default function CreateProduct() {
               margin="normal"
               name="name"
               value={product.name}
-              onChange={(e) => handleInput(e)}
+              onChange={e => handleInput(e)}
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -84,10 +83,10 @@ export default function CreateProduct() {
               fullWidth
               name="salePrice"
               value={product.salePrice}
-              onChange={(e) => handleInput(e)}
+              onChange={e => handleInput(e)}
             />
           </Grid>
-          <Grid item xs={12} md={4} style={{ position: "relative" }}>
+          <Grid item xs={12} md={4} style={{ position: 'relative' }}>
             <TextField
               label="Preço de venda"
               placeholder="Insira um valor"
@@ -96,7 +95,7 @@ export default function CreateProduct() {
               fullWidth
               name="purchasePrice"
               value={product.purchasePrice}
-              onChange={(e) => handleInput(e)}
+              onChange={e => handleInput(e)}
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -107,7 +106,7 @@ export default function CreateProduct() {
               fullWidth
               name="productCode"
               value={product.productCode}
-              onChange={(e) => handleInput(e)}
+              onChange={e => handleInput(e)}
             />
           </Grid>
           <Grid item container direction="row-reverse" xs={12}>
