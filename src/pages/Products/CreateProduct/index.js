@@ -3,17 +3,9 @@ import TextField from '@material-ui/core/TextField';
 import { CircularProgress, Grid } from '@material-ui/core';
 import SContainer from '../../../components/styled/Container';
 import SButton from '../../../components/styled/Button';
-import createNewProduct from '../../../services/products/createNewProduct';
-import CustomizedSnackbars from './CustomizedSnackbars';
 
 export default function CreateProduct() {
   const [loading, setLoading] = React.useState(false);
-  const [porcent, setPorcent] = React.useState(0);
-  const [error, setError] = React.useState({
-    status: false,
-    message: '',
-  });
-
   const [product, setProduct] = React.useState({
     name: '',
     salePrice: 0,
@@ -21,33 +13,23 @@ export default function CreateProduct() {
     productCode: 0,
   });
 
-  const getPorcent = React.useCallback(() => {
-    return (
-      (parseInt(product.salePrice, 10) * parseInt(porcent, 10)) / 100 +
-      parseInt(product.salePrice, 10)
-    );
-  }, [product.salePrice, porcent]);
-
-  const getAllProductsRequest = async () => createNewProduct(product);
-
-  const createProduct = async () => {
-    setLoading(true);
-    getAllProductsRequest(product)
-      .then(response => {
-        if (response.data.error) {
-          setError({
-            status: true,
-            message: response.data.error,
-          });
-        }
-      })
-      .catch(error => console.log({ error }));
-    setLoading(false);
-  };
+  // const createProduct = async () => {
+  //   setLoading(true);
+  //   getAllProductsRequest(product)
+  //     .then(response => {
+  //       if (response.data.error) {
+  //         setError({
+  //           status: true,
+  //           message: response.data.error,
+  //         });
+  //       }
+  //     })
+  //     .catch(error => console.log({ error }));
+  //   setLoading(false);
+  // };
 
   const onSubmit = event => {
     event.preventDefault();
-    createProduct();
   };
 
   const handleInput = event => {
@@ -59,7 +41,7 @@ export default function CreateProduct() {
 
   return (
     <SContainer>
-      {loading && <CircularProgress />}
+      {loading && <span>Carregando</span>}
       <h1>Essa página ta foda</h1>
       <form onSubmit={onSubmit}>
         <Grid container spacing={4}>
