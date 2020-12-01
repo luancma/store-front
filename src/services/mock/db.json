@@ -5,47 +5,64 @@
             "name": "Fone de ouvido",
             "salePrice": 65.9,
             "purchasePrice": 59.9,
-            "provider": 1
+            "provider": "98325fed-b773-49be-b64a-e8fb5e43e093"
         },
         {
             "id": 1,
             "name": "Laptop",
             "salePrice": 2000,
             "purchasePrice": 5000,
-            "provider": 1
+            "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
         },
         {
             "id": 2,
             "name": "Monitor",
             "salePrice": 1200,
             "purchasePrice": 1600,
-            "provider": 2
+            "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
         },
         {
             "id": 3,
             "name": "Geladeira",
             "salePrice": 3500,
             "purchasePrice": 3700,
-            "provider": 2
+            "provider": {}
         },
         {
             "id": 4,
             "name": "Cadeira confortável",
             "salePrice": 2300,
             "purchasePrice": 2800,
-            "provider": null
+            "provider": {}
         }
     ],
+    "foodType": [
+        {
+          "id": 0,
+          "type": "package",
+          "unit": "G"
+        },
+        {
+          "id": 1,
+          "type": "can",
+          "unit": "ML"
+        },
+        {
+          "id": 2,
+          "type": "bottle",
+          "unit": "L"
+        }
+      ],
     "provider": [
         {
-            "id": 0,
+            "id": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445",
             "name": "Fulado de Tal",
             "company": "Fulano SA",
             "phone": "xxxxxxxx",
             "email": "email@email.com"
         },
         {
-            "id": 1,
+            "id": "98325fed-b773-49be-b64a-e8fb5e43e093",
             "name": "Ciclano de Tal",
             "company": "Ciclano SA",
             "phone": "xxxxxxxx",
