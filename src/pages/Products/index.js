@@ -1,15 +1,54 @@
 /* eslint-disable no-restricted-globals */
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { CircularProgress, Typography } from '@material-ui/core';
+import { useSelector, useDispatch } from 'react-redux';
+import { Button, Grid } from '@material-ui/core';
 import MaterialTable from 'material-table';
+import CreateProductModal from './CreateProduct';
 import SContainer from '../../components/styled/Container';
+import DeleteProduct from './DeleteProduct';
+import { openDeleteProductModal } from '../../redux/slices/products';
 
 const Products = () => {
+  const dispatch = useDispatch();
   const products = useSelector(state => state.productsSlicer.products);
+
+  const [openModal, setOpenModal] = React.useState(false);
+
+  const [createProductModal, setCreateProductModal] = React.useState(false);
+
+  const toggleModal = () => setCreateProductModal(!createProductModal);
+
+  const handleRemoveProduct = product => {
+    dispatch(openDeleteProductModal(product));
+  };
 
   return (
     <SContainer>
+      <CreateProductModal
+        openModal={createProductModal}
+        toggleModal={toggleModal}
+      />
+      <DeleteProduct />
+      <Grid
+        container
+        direction="row-reverse"
+        style={{
+          margin: '24px 0',
+        }}
+        onClick={e => setOpenModal()}
+      >
+        <Button
+          variant="contained"
+          disableElevation
+          style={{
+            background: '#4CAF50',
+            color: '#fff',
+          }}
+          onClick={toggleModal}
+        >
+          Adicionar
+        </Button>
+      </Grid>
       <MaterialTable
         title="Produtos"
         columns={[
@@ -44,7 +83,10 @@ const Products = () => {
             icon: 'delete',
             tooltip: 'Delete User',
             onClick: (event, rowData) =>
-              alert(`You want to delete ${rowData.name}`),
+              handleRemoveProduct({
+                open: true,
+                product: rowData,
+              }),
             disabled: rowData.birthYear < 2000,
           }),
         ]}

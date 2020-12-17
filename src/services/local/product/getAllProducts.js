@@ -9,7 +9,6 @@ const getAllProducts = async () => {
       const filteredProvider = providers.find(
         provider => provider.id === product.provider,
       );
-      console.log({ filteredProvider });
       product.provider = filteredProvider;
     }
 

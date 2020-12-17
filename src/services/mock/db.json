@@ -1,72 +1,130 @@
 {
-    "products": [
-        {
-            "id": 0,
-            "name": "Fone de ouvido",
-            "salePrice": 65.9,
-            "purchasePrice": 59.9,
-            "provider": "98325fed-b773-49be-b64a-e8fb5e43e093"
-        },
-        {
-            "id": 1,
-            "name": "Laptop",
-            "salePrice": 2000,
-            "purchasePrice": 5000,
-            "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
-        },
-        {
-            "id": 2,
-            "name": "Monitor",
-            "salePrice": 1200,
-            "purchasePrice": 1600,
-            "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
-        },
-        {
-            "id": 3,
-            "name": "Geladeira",
-            "salePrice": 3500,
-            "purchasePrice": 3700,
-            "provider": {}
-        },
-        {
-            "id": 4,
-            "name": "Cadeira confortável",
-            "salePrice": 2300,
-            "purchasePrice": 2800,
-            "provider": {}
-        }
-    ],
-    "foodType": [
-        {
-          "id": 0,
-          "type": "package",
-          "unit": "G"
-        },
-        {
-          "id": 1,
-          "type": "can",
-          "unit": "ML"
-        },
-        {
-          "id": 2,
-          "type": "bottle",
-          "unit": "L"
-        }
-      ],
-    "provider": [
-        {
-            "id": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445",
-            "name": "Fulado de Tal",
-            "company": "Fulano SA",
-            "phone": "xxxxxxxx",
-            "email": "email@email.com"
-        },
-        {
-            "id": "98325fed-b773-49be-b64a-e8fb5e43e093",
-            "name": "Ciclano de Tal",
-            "company": "Ciclano SA",
-            "phone": "xxxxxxxx",
-            "email": "email@email.com"
-        }
-    ]
+  "products": [
+    {
+      "id": "488cb2b1-e88d-4dfa-a6f0-57b619df1416",
+      "name": "Fone de ouvido",
+      "salePrice": 65.9,
+      "purchasePrice": 59.9,
+      "provider": "98325fed-b773-49be-b64a-e8fb5e43e093"
+    },
+    {
+      "id": "872ef347-c97a-4928-ae89-38eff75927bf",
+      "name": "Laptop",
+      "salePrice": 2000,
+      "purchasePrice": 5000,
+      "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
+    },
+    {
+      "id": "f013121f-86e1-468d-9af5-a725e36aa565",
+      "name": "Monitor",
+      "salePrice": 1200,
+      "purchasePrice": 1600,
+      "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
+    },
+    {
+      "id": "97b9a7e5-b340-49e5-8d01-052c4f430cbf",
+      "name": "Geladeira",
+      "salePrice": 3500,
+      "purchasePrice": 3700,
+      "provider": {}
+    },
+    {
+      "id": "6e332fee-84de-4c9d-911e-5a752cd83e53",
+      "name": "Cadeira confortável",
+      "salePrice": 2300,
+      "purchasePrice": 2800,
+      "provider": {}
+    }
+  ],
+  "foodType": [
+    {
+      "id": 0,
+      "type": "package",
+      "unit": "G"
+    },
+    {
+      "id": 1,
+      "type": "can",
+      "unit": "ML"
+    },
+    {
+      "id": 2,
+      "type": "bottle",
+      "unit": "L"
+    }
+  ],
+  "provider": [
+    {
+      "id": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445",
+      "name": "Fulado de Tal",
+      "company": "Fulano SA",
+      "phone": "xxxxxxxx",
+      "email": "email@email.com"
+    },
+    {
+      "id": "98325fed-b773-49be-b64a-e8fb5e43e093",
+      "name": "Ciclano de Tal",
+      "company": "Ciclano SA",
+      "phone": "xxxxxxxx",
+      "email": "email@email.com"
+    }
+  ],
+  "stock": [
+    {
+      "id": "00f2e49b-23bf-4e18-be92-cd027a692f75",
+      "product": {
+        "id": "488cb2b1-e88d-4dfa-a6f0-57b619df1416",
+        "name": "Fone de ouvido",
+        "salePrice": 65.9,
+        "purchasePrice": 59.9,
+        "provider": "98325fed-b773-49be-b64a-e8fb5e43e093"
+      },
+      "current_size": "25",
+      "minimal_size": "5",
+      "created_at": "2020-12-03T19:47:12-0300",
+      "updated_at": "2020-12-03T20:18:12-0300"
+    },
+    {
+      "id": "11f7f5db-fd66-4bbf-875d-15a3534945ad",
+      "product": {
+        "id": "872ef347-c97a-4928-ae89-38eff75927bf",
+        "name": "Laptop",
+        "salePrice": 2000,
+        "purchasePrice": 5000,
+        "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
+      },
+      "current_size": "6",
+      "minimal_size": "5",
+      "created_at": "2020-12-11T17:47:12-0300",
+      "updated_at": "2020-12-11T19:47:12-0300"
+    },
+    {
+      "id": "3ff05e4d-1875-416c-8062-4c6db0b0fbc9",
+      "product": {
+        "id": "f013121f-86e1-468d-9af5-a725e36aa565",
+        "name": "Monitor",
+        "salePrice": 1200,
+        "purchasePrice": 1600,
+        "provider": "3f1941df-fdf8-4023-b4ac-d0a3b7c42445"
+      },
+      "current_size": "70",
+      "minimal_size": "5",
+      "created_at": "2020-12-01T19:04:12-0300",
+      "updated_at": "2020-12-03T19:18:12-0300"
+    },
+    {
+      "id": "cba752ef-8613-4da2-a858-cf2ccb33d9f0",
+      "product": {
+        "id": "97b9a7e5-b340-49e5-8d01-052c4f430cbf",
+        "name": "Geladeira",
+        "salePrice": 3500,
+        "purchasePrice": 3700,
+        "provider": {}
+      },
+      "current_size": "25",
+      "minimal_size": "5",
+      "created_at": "2020-12-01T04:47:12-0300",
+      "updated_at": "2020-12-03T19:18:12-0300"
+    }
+  ]
 }
